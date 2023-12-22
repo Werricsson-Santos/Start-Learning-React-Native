@@ -12,7 +12,7 @@ function Item(props) {
             marginRight: 16,
             padding: 16,
             width: '100%',
-        }}>
+        }} >
             <Text style={{fontWeight: '700'}}> {props.text} </Text>
         </View>
     );
@@ -29,11 +29,11 @@ export default function HomeScreen() {
             <Text style={styles.title}>Minha jornada no React Native</Text>
             <StatusBar style='auto' />
             <View style={styles.itemGrid}>
-                <Item text='Fundamentos do React Native' bgColor='#00ff9f' />
-                <Item text='Expo e Expo CLI' bgColor='#00ff9f' />
-                <Item text='Estilização com StyleSheet' bgColor='#00ff9f' />
+                <Item text='Fundamentos do React Native' bgColor='#00ff70' />
+                <Item text='Expo e Expo CLI' bgColor='#00ff70' />
+                <Item text='Estilização com StyleSheet' bgColor='#0fff70' />
                 <TouchableOpacity activeOpacity={0.8} onPress={NavigateToNavigationScreen} style={styles.button}>
-                    <Item text='Navegação' bgColor='#f64348' />
+                    <Item text='Navegação' bgColor='#00ff9f' />
                 </TouchableOpacity>
                 <Item text='ScrollView e FlatList' bgColor='#f64348' />
                 <Item text='Periféricos' bgColor='#f64348' />
@@ -65,5 +65,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         marginTop: 10,
+    },
+    button: {
+        width: '100%',
     },
 });
