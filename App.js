@@ -1,5 +1,5 @@
-import StackNavigator from "./src/stackNavigator";
+import Routes from "./src/Routes"
 
 export default function App() {
-  return <StackNavigator />;
+  return <Routes />;
 };

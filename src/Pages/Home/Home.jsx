@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
 
 
 function Item(props) {
@@ -28,19 +28,22 @@ export default function HomeScreen() {
         <View style={styles.container}>
             <Text style={styles.title}>Minha jornada no React Native</Text>
             <StatusBar style='auto' />
-            <View style={styles.itemGrid}>
-                <Item text='Fundamentos do React Native' bgColor='#00ff70' />
-                <Item text='Expo e Expo CLI' bgColor='#00ff70' />
-                <Item text='Estilização com StyleSheet' bgColor='#0fff70' />
-                <TouchableOpacity activeOpacity={0.8} onPress={NavigateToNavigationScreen} style={styles.button}>
-                    <Item text='Navegação' bgColor='#00ff9f' />
-                </TouchableOpacity>
-                <Item text='ScrollView e FlatList' bgColor='#f64348' />
-                <Item text='Periféricos' bgColor='#f64348' />
-                <Item text='Styled Components' bgColor='#f64348' />
-                <Item text='Temas e Estilos Globais' bgColor='#f64348' />
-                <Item text='Consumo de APIs' bgColor='#f64348' />
-            </View>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={styles.itemGrid}>
+                    <Item text='Fundamentos do React Native' bgColor='#00ff9f' />
+                    <Item text='Expo e Expo CLI' bgColor='#00ff9f' />
+                    <Item text='Estilização com StyleSheet' bgColor='#00ff9f' />
+                    <TouchableOpacity activeOpacity={0.8} onPress={NavigateToNavigationScreen} style={styles.button}>
+                        <Item text='Navegação' bgColor='#00ff9f' />
+                    </TouchableOpacity>
+                    <Item text='ScrollView' bgColor='#00ff9f' />
+                    <Item text='FlatList' bgColor='#f64348' />
+                    <Item text='Periféricos' bgColor='#f64348' />
+                    <Item text='Styled Components' bgColor='#f64348' />
+                    <Item text='Temas e Estilos Globais' bgColor='#f64348' />
+                    <Item text='Consumo de APIs' bgColor='#f64348' />
+                </View>
+            </ScrollView>
         </View>
     );
 }
