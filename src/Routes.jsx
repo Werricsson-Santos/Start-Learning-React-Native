@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./Pages/Home/Home";
 import NavigationScreen from "./Pages/Home/screens/NavigationScreen";
+import ApiScreen from "./Pages/Home/screens/ApiScreen";
 import Settings from "./Pages/Settings/Settings";
 import { Ionicons } from "@expo/vector-icons"
 
@@ -14,6 +15,7 @@ const HomeStack = () => {
     <Stack.Navigator initialRouteName="ReactNativeJourney" screenOptions={{headerShown: false}}>
         <Stack.Screen name="ReactNativeJourney" component={HomeScreen} />
         <Stack.Screen name="Navigation" component={NavigationScreen} />
+        <Stack.Screen name="API" component={ApiScreen} />
     </Stack.Navigator>
     );  
 };

@@ -1,21 +1,9 @@
-import { View, Text, StyleSheet } from "react-native";
+import { Container, Title } from "../../../Components/index";
 
 export default function NavigationScreen() {
     return(
-        <View style={styles.container}>
-            <Text>Aula de navegação</Text>
-        </View>
+        <Container>
+            <Title text="Aula de Navegação" />
+        </Container>
     );
 };
-
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingHorizontal: 16,
-        paddingTop: 80
-    },
-});
